@@ -14,6 +14,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
+    - name: Setup
+      run: bundle install
     - name: Build
       run: bundle exec fastlane build
     - name: Run tests
